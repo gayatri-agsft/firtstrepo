@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>UI</title>
+</head>
+
+<body class="bodyimage">
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+        }
+        
+        h1,
+        h2,
+        h3 {
+            margin: 0;
+        }
+        
+        .mainScreen {
+            z-index: 20;
+            background-image: url(r1_background.png);
+        }
+        
+        .setting {
+            width: 1920px;
+            height: 1080px;
+            font-family: sans-serif;
+            z-index: 25;
+            background: #fff;
+            margin: 0;
+        }
+        
+        .menu {
+            z-index: 15;
+            background-image: url(r1_background.png);
+        }
+        
+        .bodyimage {
+            background-image: url(r1_background.png);
+        }
+        
+        .centerimage {
+            position: fixed;
+            left: 750px;
+            top: 100px;
+            bottom: 200px;
+            right: 750px;
+            width: 500px;
+            height: 500px;
+        }
+        
+        .centerimage img {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .text {
+            color: #fff;
+            font-size: 50px;
+            text-align: center;
+        }
+        
+        .cornerimage {
+            height: 200px;
+            width: 200px;
+            position: fixed;
+            right: 100px;
+            bottom: 100px;
+        }
+        
+        .cornerimage img {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .first {
+            background-color: #132930;
+            color: #fff;
+            height: 100px;
+            width: 100%;
+        }
+        
+        .first h1 {
+            position: relative;
+            top: 28px;
+            left: 103px;
+        }
+        
+        .selected {
+            background-color: #8b91c4;
+        }
+        
+        .second {
+            height: 100px;
+            width: 90%;
+        }
+        
+        .container {
+            width: 100%;
+        }
+        
+        .container .first h1 {
+            position: relative;
+        }
+        
+        .wrapper div h1 {
+            float: left;
+            margin-left: 10px;
+        }
+        
+        .panel {
+            height: 250px;
+            width: 550px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            position: absolute;
+            top: 400px;
+            left: 800px;
+        }
+        
+        .panel a {
+            text-decoration: none !important;
+        }
+        
+        .panel a:active {
+            background-color: grey;
+        }
+        
+        .wrapper1 {
+            position: absolute;
+        }
+        
+        .text-input {
+            width: 400px;
+            background: #eae9ca;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #555;
+            outline: none;
+            font-size: 20px;
+            height: 60px;
+            text-align: center;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        ul li input:hover {
+            background-color: #f0f85e;
+            font-weight: bold;
+            font-size: 22px;
+        }
+        
+        .cursor .text-input {
+            background-color: #f0f85e;
+            font-weight: bold;
+            font-size: 22px;
+        }
+        
+        .version {
+            color: #f0f85e;
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+        }
+        
+        .screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 1920px;
+            height: 1080px;
+        }
+    </style>
+    
+    <div class="mainScreen screen">
+        <div class="conatiner">
+            <div class="centerimage"> <img src="r1_tvicon.png">
+                <h1 class="text"> Watch TV</h1> </div>
+            <div class="cornerimage"> <img src="r1_settings128.png"> </div>
+        </div>
+    </div>
+    <div class="setting screen">
+        <div class="container">
+            <div class="first">
+                <h1> Display</h1></div>
+            <div class="wrapper" align="center">
+                <div class="second selected">
+                    <h1> Font Size</h1></div>
+                <div class="second">
+                    <h1>Screen Scale</h1></div>
+                <div class="second">
+                    <h1>HDMI Mode</h1></div>
+            </div>
+        </div>
+        <div class="panel">
+            <div style="position:relative;height:100%;top:0;display:block">
+                <h3> Font Size</h3>
+                <div class="wrapper1">
+                    <input type="radio" name="small" value="Small">Small
+                    <br>
+                    <input type="radio" name="normal" value="Normal">Normal
+                    <br>
+                    <input type="radio" name="large" value="Large">Large
+                    <br>
+                    <input type="radio" name="huge" value="Huge">Huge
+                    <br> </div> <a href="cancel.html" style="color:blue;position:absolute;bottom:0;right:0;">CANCEL</a> </div>
+        </div>
+    </div>
+    <div class="menu screen">
+        <ul align="center">
+            <li class="cursor">
+                <input id="channelguidexmlfile" class="text-input" value="CHANNEL GUIDE XML FILE"> </li>
+            <li>
+                <input id="adjusttvscreen" class="text-input" value="ADJUST TV SCREEN"> </li>
+            <li>
+                <input id="configurenetwork" class="text-input" value="CONFIGURE NETWORK"> </li>
+            <li>
+                <input id="installapps" class="text-input" value="INSTALL APPS"> </li>
+            <li>
+                <input id="runapps" class="text-input" value="RUN APPS"> </li>
+            <li>
+                <input id="erasechannelinfo" class="text-input" value="ERASE CHANNEL INFO"> </li>
+            <li>
+                <input id="updatesystem" class="text-input" value="UPDATE SYSTEM"> </li>
+            <li>
+                <input id="rebot system" class="text-input" value="REBOT SYSTEM"> </li>
+        </ul>
+        <div class="version">
+            <h2> 1.0.0.9</h2> </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+    $("#channelguidexmlfile").on('click', function () {
+        console.log('channelguidexmlfile');
+    })
+    $("#adjusttvscreen").on('click', function () {
+        console.log('adjusttvscreen');
+    })
+    $("#configurenetwork").on('click', function () {
+        console.log('configurenetwork');
+    })
+    $("#installapps").on('click', function () {
+        console.log('installapps');
+    })
+    $("#runapps").on('click', function () {
+        console.log('runapps');
+    })
+    $("#erasechannelinfo").on('click', function () {
+        console.log('erasechannelinfo');
+    })
+    $("#updatesystem").on('click', function () {
+        console.log('updatesystem');
+    })
+    $("#rebotsystem").on('click', function () {
+        console.log('rebotsystem');
+    })
+
+    function click() {
+        $('.cursor input').click();
+        console.log("click1");
+    }
+    window.addEventListener("keyup", function (data) {
+        switch (data.keyCode) {
+        case 13:
+            console.log("Enter");
+            click();
+            break;
+        case 38:
+            console.log("up");
+            up();
+            break;
+        case 40:
+            console.log("down");
+            down();
+            break;
+        case 39:
+            console.log("right");
+            break;
+        case 37:
+            console.log("left");
+            break;
+        default:
+            console.log("somekey");
+            break;
+        }
+    })
+
+    function up() {
+        // var x = $("ul li").hasClass("cursor");
+        var index = $("ul li").index($('.cursor'));
+        if (index > 0) {
+            $('ul').children().eq(index - 1).addClass('cursor');
+            $('ul').children().eq(index).removeClass('cursor');
+        }
+    }
+
+    function down() {
+        // var x = $("ul li").hasClass("cursor");
+        var index = $("ul li").index($('.cursor'));
+        $('ul').children().eq(index).removeClass('cursor');
+        $('ul').children().eq(index + 1).addClass('cursor');
+    }
+</script>
+</div>
+
+</body>
+
+</html>
